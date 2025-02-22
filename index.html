@@ -4,42 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Property Listings</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Find Your Dream Property</h1>
-        <input type="text" id="search" placeholder="Search by title...">
+        <h1>Available Properties</h1>
+        <input type="text" id="search-bar" placeholder="Search properties...">
     </header>
     
-    <main>
-        <div class="property-grid">
-            <div class="property-card" onclick="openProperty('property1')">
+    <div class="property-list">
+        <div class="property-card">
+            <a href="property.html?id=property1">
                 <h2>Modern Apartment</h2>
                 <p>2BHK in downtown</p>
-            </div>
-            <div class="property-card" onclick="openProperty('property2')">
+            </a>
+        </div>
+
+        <div class="property-card">
+            <a href="property.html?id=property2">
                 <h2>Luxury Villa</h2>
                 <p>Beachfront property</p>
-            </div>
-            <!-- More properties can be added here -->
-        </div>
-    </main>
-    
-<div id="property-modal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span> <!-- Removed onclick -->
-        <h2 id="property-title"></h2>
-        <p id="property-description"></p>
-        <div class="image-slider">
-            <button id="prev-btn">&#10094;</button> <!-- Added ID -->
-            <img id="property-image" src="" alt="Property Image">
-            <button id="next-btn">&#10095;</button> <!-- Added ID -->
+            </a>
         </div>
     </div>
-</div>
 
-    
-    <script src="js/script.js"></script>
+    <script>
+        document.getElementById("search-bar").addEventListener("input", function() {
+            let searchQuery = this.value.toLowerCase();
+            document.querySelectorAll(".property-card").forEach(card => {
+                let title = card.textContent.toLowerCase();
+                card.style.display = title.includes(searchQuery) ? "block" : "none";
+            });
+        });
+    </script>
 </body>
 </html>
