@@ -26,18 +26,19 @@
         </div>
     </main>
     
-    <div id="property-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeProperty()">&times;</span>
-            <h2 id="property-title"></h2>
-            <p id="property-description"></p>
-            <div class="image-slider">
-                <button onclick="prevImage()">&#10094;</button>
-                <img id="property-image" src="" alt="Property Image">
-                <button onclick="nextImage()">&#10095;</button>
-            </div>
+<div id="property-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span> <!-- Removed onclick -->
+        <h2 id="property-title"></h2>
+        <p id="property-description"></p>
+        <div class="image-slider">
+            <button id="prev-btn">&#10094;</button> <!-- Added ID -->
+            <img id="property-image" src="" alt="Property Image">
+            <button id="next-btn">&#10095;</button> <!-- Added ID -->
         </div>
     </div>
+</div>
+
     
     <script src="js/script.js"></script>
 </body>
