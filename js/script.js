@@ -12,8 +12,18 @@ document.addEventListener("DOMContentLoaded", function() {
     let currentImages = [];
     let currentIndex = 0;
 
-    window.openProperty = function(propertyId) {
+    // Attach event listeners to all property cards
+    document.querySelectorAll(".property-card").forEach(card => {
+        card.addEventListener("click", function() {
+            const propertyId = this.getAttribute("data-id");
+            openProperty(propertyId);
+        });
+    });
+
+    function openProperty(propertyId) {
+        if (!images[propertyId]) return;
         modal.style.display = "flex";
+
         if (propertyId === "property1") {
             modalTitle.textContent = "Modern Apartment";
             modalDescription.textContent = "2BHK in downtown";
@@ -21,33 +31,36 @@ document.addEventListener("DOMContentLoaded", function() {
             modalTitle.textContent = "Luxury Villa";
             modalDescription.textContent = "Beachfront property";
         }
+
         currentImages = images[propertyId];
         currentIndex = 0;
         modalImage.src = currentImages[currentIndex];
-    };
+    }
 
-    window.closeProperty = function() {
+    document.getElementById("property-modal").addEventListener("click", function(event) {
+        if (event.target === modal || event.target.classList.contains("close")) {
+            closeProperty();
+        }
+    });
+
+    function closeProperty() {
         modal.style.display = "none";
-    };
+    }
 
-    window.nextImage = function() {
+    document.querySelector(".image-slider button:first-child").addEventListener("click", prevImage);
+    document.querySelector(".image-slider button:last-child").addEventListener("click", nextImage);
+
+    function nextImage() {
         if (currentImages.length > 1) {
             currentIndex = (currentIndex + 1) % currentImages.length;
             modalImage.src = currentImages[currentIndex];
         }
-    };
+    }
 
-    window.prevImage = function() {
+    function prevImage() {
         if (currentImages.length > 1) {
             currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
             modalImage.src = currentImages[currentIndex];
         }
-    };
-
-    window.onclick = function(event) {
-        if (event.target === modal) {
-            closeProperty();
-        }
-    };
+    }
 });
-
