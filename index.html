@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listings</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Find Your Dream Property</h1>
+        <input type="text" id="search" placeholder="Search by title...">
+    </header>
+    
+    <main>
+        <div class="property-grid">
+            <div class="property-card" onclick="openProperty('property1')">
+                <h2>Modern Apartment</h2>
+                <p>2BHK in downtown</p>
+            </div>
+            <div class="property-card" onclick="openProperty('property2')">
+                <h2>Luxury Villa</h2>
+                <p>Beachfront property</p>
+            </div>
+            <!-- More properties can be added here -->
+        </div>
+    </main>
+    
+    <div id="property-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProperty()">&times;</span>
+            <h2 id="property-title"></h2>
+            <p id="property-description"></p>
+            <div class="image-slider">
+                <button onclick="prevImage()">&#10094;</button>
+                <img id="property-image" src="" alt="Property Image">
+                <button onclick="nextImage()">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
