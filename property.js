@@ -1,9 +1,9 @@
 const properties = {
     "property1": {
-        title: "Modern Apartment",
-        description: "2BHK in downtown with a great city view.",
-        images: ["images/apartment1.jpg", "images/apartment2.jpg"],
-        videos: ["videos/apartment-tour.mp4"] // Video added
+        title: "Bungalow with Land",
+        description: "Extensive open land with bungalow.",
+        images: ["images/bung1.jpeg", "images/bung2.jpg", "images/bung3.jpeg", "images/bung4.jpeg"],
+        videos: ["videos/bung-vid1.mp4", "videos/bung-vid2.mp4"]
     },
     "property2": {
         title: "Luxury Villa",
