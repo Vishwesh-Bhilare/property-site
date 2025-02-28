@@ -7,16 +7,30 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <header>
+        <h1>Property Details</h1>
+    </header>
+
     <div class="property-details">
         <h2 id="property-title"></h2>
         <p id="property-description"></p>
+
         <div class="image-slider">
-            <button id="prev-btn">&#10094;</button>
-            <img id="property-image" src="" alt="Property Image">
-            <button id="next-btn">&#10095;</button>
+            <button onclick="prevMedia()">&#10094;</button>
+            <div id="media-container">
+                <img id="property-media" src="" alt="Property Media">
+                <video id="property-video" controls style="display: none;"></video>
+            </div>
+            <button onclick="nextMedia()">&#10095;</button>
         </div>
     </div>
-    <a href="index.html">← Back to Home</a>
+
+    <footer>
+        <p>&copy; 2025 Your Name. All rights reserved.</p>
+        <p>Contact: your-email@example.com</p>
+    </footer>
+
     <script src="property.js"></script>
 </body>
 </html>
