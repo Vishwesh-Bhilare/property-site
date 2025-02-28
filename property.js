@@ -7,11 +7,13 @@ document.addEventListener("DOMContentLoaded", function() {
             title: "Modern Apartment",
             description: "2BHK in downtown",
             images: ["images/apartment1.jpg", "images/apartment2.jpg"]
+            videos: ["videos/apartment-tour.mp4"] 
         },
         "property2": {
             title: "Luxury Villa",
             description: "Beachfront property",
             images: ["images/villa1.jpg", "images/villa2.jpg"]
+            videos: ["videos/villa-tour.mp4"]
         }
     };
 
