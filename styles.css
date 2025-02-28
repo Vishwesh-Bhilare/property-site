@@ -95,4 +95,17 @@ footer {
     width: 100%;
 }
 
+#media-container {
+    position: relative;
+    max-width: 100%;
+}
 
+#property-media, #property-video {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#property-video {
+    width: 100%;
+    height: auto;
+}
