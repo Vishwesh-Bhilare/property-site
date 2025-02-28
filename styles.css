@@ -1,5 +1,4 @@
-/* styles.css */
-
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,6 +6,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Header */
 header {
     background-color: #333;
     color: white;
@@ -14,6 +14,7 @@ header {
     padding: 20px;
 }
 
+/* Search Bar */
 #search-bar {
     width: 80%;
     max-width: 400px;
@@ -24,6 +25,7 @@ header {
     border-radius: 5px;
 }
 
+/* Property List Grid */
 .property-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -31,6 +33,7 @@ header {
     padding: 20px;
 }
 
+/* Property Cards */
 .property-card {
     background: white;
     padding: 20px;
@@ -54,6 +57,7 @@ header {
     margin: 10px 0;
 }
 
+/* Property Details Page */
 .property-details {
     max-width: 800px;
     margin: 50px auto;
@@ -64,6 +68,7 @@ header {
     text-align: center;
 }
 
+/* Image & Video Slider */
 .image-slider {
     display: flex;
     align-items: center;
@@ -79,22 +84,6 @@ header {
     margin: 0 10px;
 }
 
-.image-slider img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
 #media-container {
     position: relative;
     max-width: 100%;
@@ -108,4 +97,14 @@ footer {
 #property-video {
     width: 100%;
     height: auto;
+    display: none;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
 }
