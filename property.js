@@ -1,15 +1,15 @@
 const properties = {
     "property1": {
+        title: "Open Plot",
+        description: "Available open plot.",
+        images: [],
+        videos: []
+    },
+    "property2": {
         title: "Bungalow with Land",
         description: "Extensive open land with bungalow.",
         images: ["images/bung1.jpeg", "images/bung2.jpeg", "images/bung3.jpeg", "images/bung4.jpeg"],
         videos: ["videos/bung-vid1.mp4"]
-    },
-    "property2": {
-        title: "Luxury Villa",
-        description: "Beachfront villa with a private pool and garden.",
-        images: ["images/villa1.jpg", "images/villa2.jpg"],
-        videos: ["videos/villa-tour.mp4"]
     },
     "property3": {
         title: "Cozy Cabin",
