@@ -1,42 +1,61 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const params = new URLSearchParams(window.location.search);
-    const propertyId = params.get("id");
+const properties = {
+    "property1": {
+        title: "Modern Apartment",
+        description: "2BHK in downtown with a great city view.",
+        images: ["images/apartment1.jpg", "images/apartment2.jpg"],
+        videos: ["videos/apartment-tour.mp4"] // Video added
+    },
+    "property2": {
+        title: "Luxury Villa",
+        description: "Beachfront villa with a private pool and garden.",
+        images: ["images/villa1.jpg", "images/villa2.jpg"],
+        videos: ["videos/villa-tour.mp4"]
+    },
+    "property3": {
+        title: "Cozy Cabin",
+        description: "A small cabin in the woods, perfect for nature lovers.",
+        images: ["images/cabin1.jpg", "images/cabin2.jpg"],
+        videos: ["videos/cabin-tour.mp4"]
+    }
+};
 
-    const properties = {
-        "property1": {
-            title: "Modern Apartment",
-            description: "2BHK in downtown",
-            images: ["images/apartment1.jpg", "images/apartment2.jpg"]
-            videos: ["videos/apartment-tour.mp4"] 
-        },
-        "property2": {
-            title: "Luxury Villa",
-            description: "Beachfront property",
-            images: ["images/villa1.jpg", "images/villa2.jpg"]
-            videos: ["videos/villa-tour.mp4"]
-        }
-    };
+document.addEventListener("DOMContentLoaded", function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const propertyId = urlParams.get("id");
+    const property = properties[propertyId];
 
-    if (propertyId && properties[propertyId]) {
-        document.getElementById("property-title").textContent = properties[propertyId].title;
-        document.getElementById("property-description").textContent = properties[propertyId].description;
+    if (property) {
+        document.getElementById("property-title").textContent = property.title;
+        document.getElementById("property-description").textContent = property.description;
 
-        let currentImages = properties[propertyId].images;
+        const mediaContainer = [...property.images, ...property.videos]; // Combine images & videos
         let currentIndex = 0;
-        let imageElement = document.getElementById("property-image");
+        const mediaElement = document.getElementById("property-media");
+        const videoElement = document.getElementById("property-video");
 
-        imageElement.src = currentImages[currentIndex];
+        function updateMedia() {
+            let currentMedia = mediaContainer[currentIndex];
+            if (currentMedia.endsWith(".mp4")) {
+                mediaElement.style.display = "none";
+                videoElement.style.display = "block";
+                videoElement.src = currentMedia;
+            } else {
+                mediaElement.style.display = "block";
+                videoElement.style.display = "none";
+                mediaElement.src = currentMedia;
+            }
+        }
 
-        document.getElementById("prev-btn").addEventListener("click", function() {
-            currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-            imageElement.src = currentImages[currentIndex];
-        });
+        window.prevMedia = function () {
+            currentIndex = (currentIndex - 1 + mediaContainer.length) % mediaContainer.length;
+            updateMedia();
+        };
 
-        document.getElementById("next-btn").addEventListener("click", function() {
-            currentIndex = (currentIndex + 1) % currentImages.length;
-            imageElement.src = currentImages[currentIndex];
-        });
-    } else {
-        document.body.innerHTML = "<h2>Property Not Found</h2><a href='index.html'>← Back to Home</a>";
+        window.nextMedia = function () {
+            currentIndex = (currentIndex + 1) % mediaContainer.length;
+            updateMedia();
+        };
+
+        updateMedia(); // Show the first media
     }
 });
