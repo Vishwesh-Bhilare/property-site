@@ -3,7 +3,7 @@ const properties = {
         title: "Bungalow with Land",
         description: "Extensive open land with bungalow.",
         images: ["images/bung1.jpeg", "images/bung2.jpg", "images/bung3.jpeg", "images/bung4.jpeg"],
-        videos: ["videos/bung-vid1.mp4", "videos/bung-vid2.mp4"]
+        videos: ["videos/bung-vid1.mp4"]
     },
     "property2": {
         title: "Luxury Villa",
