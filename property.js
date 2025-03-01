@@ -5,13 +5,33 @@ const properties = {
         images: [],
         videos: []
     },
+    /*
     "property2": {
         title: "Bungalow with Land",
         description: "Extensive open land with bungalow.",
         images: ["images/bung1.jpeg", "images/bung2.jpeg", "images/bung3.jpeg", "images/bung4.jpeg"],
         videos: ["videos/bung-vid1.mp4"]
     }
+    */
+"property2": {
+    title: "Bungalow with Land",
+    description: `<p>
+                    Nestled on the picturesque Panshet-Varasgaon road, just 4 km from Surya Shibir, this tranquil 2.5-acre farm offers a slice of paradise. Enjoy an array of fruit-bearing Kesar mangoes, coconuts, mahogany trees, and lush bamboo, complemented by a variety of medicinal plants. You'll also find an impressive selection of papaya, banana, jackfruit, jamun, mulberry, and litchi trees.
+                    
+                    The charming 2,000 sq. ft. farmhouse, constructed with local laterite stone, is perfectly situated with breathtaking lake views and direct access to the backwaters. The property features fully developed landscaping, ensuring a serene, natural environment.
+                    
+                    Additional highlights include:
+                    <ul>
+                        <li>13 lakh liters of water storage</li>
+                        <li>MSEB power supply</li>
+                        <li>Road access right to the farmhouse</li>
+                    </ul>
+                    This is a unique opportunity to own a farm with both natural beauty and modern amenities—perfect for anyone seeking peace and privacy, with easy access to the lake.
+                </p>`,
+    images: ["images/bung1.jpeg", "images/bung2.jpeg", "images/bung3.jpeg", "images/bung4.jpeg"],
+    videos: ["videos/bung-vid1.mp4"]
 };
+
 
 document.addEventListener("DOMContentLoaded", function () {
     const urlParams = new URLSearchParams(window.location.search);
