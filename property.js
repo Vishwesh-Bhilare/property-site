@@ -3,7 +3,7 @@ const properties = {
         title: "Open Plot",
         description: "Available open plot.",
         images: ["images/open_land_1.jpeg", "images/open_land_2.jpeg", "images/open_land_3.jpeg", "images/open_land_4.jpeg", "images/open_land_5.jpeg", "images/open_land_6.jpeg", "images/open_land_7.jpeg", "images/open_land_8.jpeg", "images/open_land_9.jpeg"],
-        videos: ["videos/open_land_vid1.mp4"]
+        videos: ["videos/open_land_vid1.mp4", "videos/open_land_vid2.mp4"]
     },
     /*
     "property2": {
