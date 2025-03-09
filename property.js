@@ -1,7 +1,7 @@
 const properties = {
     "property1": {
         title: "Open Plot",
-        description: "Fully Developed Land, only 37km from Kothrud, Pune. Suitable for plotting.",
+        description: "Fully Developed 55 acres of Land, only 37km from Kothrud, Pune. Suitable for plotting.",
         images: ["images/open_land_1.jpeg", "images/open_land_2.jpeg", "images/open_land_3.jpeg", "images/open_land_4.jpeg", "images/open_land_5.jpeg", "images/open_land_6.jpeg", "images/open_land_7.jpeg", "images/open_land_8.jpeg", "images/open_land_9.jpeg"],
         videos: ["videos/open_land_vid1.mp4", "videos/open_land_vid2.mp4"]
     },
