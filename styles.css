@@ -122,6 +122,23 @@ footer {
     right: 20px;
 }
 
+/* About Button */
+.about-button {
+    background-color: #2196F3;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+.about-button:hover {
+    background-color: #1976D2;
+}
+
 .home-button:hover {
     background-color: #e68900;
 }
