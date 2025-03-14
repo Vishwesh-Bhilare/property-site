@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    box-sizing: border-box;
 }
 
 /* Sticky Navigation Bar */
@@ -39,7 +40,7 @@ nav a:hover {
 /* Hero Section */
 .hero {
     height: 400px;
-    background: url('images/hero.jpg') no-repeat center center/cover;
+    background: url('/images/hero.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,4 +126,20 @@ footer {
     text-align: center;
     padding: 15px;
     margin-top: 30px;
+}
+
+.property-details {
+    max-width: 800px;
+    margin: 70px auto; /* Offset for sticky navbar */
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
