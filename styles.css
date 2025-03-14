@@ -14,7 +14,7 @@ header {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 10px 20px; /* Adjusted padding for better spacing */
     position: fixed;
     width: 100%;
     top: 0;
@@ -23,7 +23,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
 }
 
 nav a {
@@ -57,6 +56,7 @@ nav a:hover {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
+    margin-top: 20px; /* Ensure spacing below hero */
 }
 
 .property-card {
@@ -120,6 +120,7 @@ nav a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Footer */
 footer {
     background-color: #333;
     color: white;
@@ -128,6 +129,7 @@ footer {
     margin-top: 30px;
 }
 
+/* Property Details */
 .property-details {
     max-width: 800px;
     margin: 70px auto; /* Offset for sticky navbar */
@@ -138,6 +140,7 @@ footer {
     text-align: center;
 }
 
+/* General Container */
 .container {
     width: 90%;
     max-width: 1200px;
