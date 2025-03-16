@@ -34,18 +34,6 @@ header {
     padding: 20px;
 }
 
-/* Property Cards */
-.property-card {
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Glass effect */
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    text-align: center;
-}
-
 .property-card:hover {
     transform: scale(1.05);
 }
@@ -67,19 +55,7 @@ header {
     border-radius: 10px;
 }
 
-/* Property Details Page */
-.property-details {
-    max-width: 800px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    background: rgba(255, 255, 255, 0.9); /* Light background for readability */
-    padding: 20px;
-    border-radius: 10px;
-}
+
 
 /* Image & Video Slider */
 .image-slider {
@@ -139,7 +115,24 @@ footer {
     background-color: #e68900;
 }
 
-.property-card:hover, .property-details:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+.property-card, .property-details {
+    background: rgba(255, 255, 255, 0.15); /* More subtle transparency */
+    backdrop-filter: blur(8px); /* Glass effect */
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft outer shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative; /* Needed for text overlay */
+    overflow: hidden; /* Prevents blur effect inside */
+}
+
+/* Dark semi-transparent background for text readability */
+.property-card h2, .property-card p,
+.property-details h2, .property-details p {
+    background: rgba(0, 0, 0, 0.5); /* Dark background */
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    display: inline-block;
 }
