@@ -125,6 +125,7 @@ footer {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     position: relative; /* Needed for text overlay */
     overflow: hidden; /* Prevents blur effect inside */
+    text-align: center;
 }
 
 /* Dark semi-transparent background for text readability */
