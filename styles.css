@@ -1,66 +1,39 @@
-/* styles.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-
+/* General Styles */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    box-sizing: border-box;
 }
 
-/* Sticky Navigation Bar */
+/* Header */
 header {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px 20px; /* Adjusted padding for better spacing */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 20px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: 600;
+/* Search Bar */
+#search-bar {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Hero Section */
-.hero {
-    height: 400px; /* Adjust as needed */
-    background-image: url('./images/hero.jpg'); /* Ensure this matches your GitHub repo */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-}
-
-/* Property List */
+/* Property List Grid */
 .property-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
-    margin-top: 20px; /* Ensure spacing below hero */
 }
 
+/* Property Cards */
 .property-card {
     background: white;
     padding: 20px;
@@ -74,52 +47,57 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* Improved Image & Video Slider */
+.property-card a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.property-card h2 {
+    margin: 10px 0;
+}
+
+/* Property Details Page */
+.property-details {
+    max-width: 800px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Image & Video Slider */
 .image-slider {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    position: relative;
 }
 
 .image-slider button {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+    background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
-    padding: 10px;
-    border-radius: 50%;
-    transition: background 0.3s;
+    margin: 0 10px;
 }
 
-.image-slider button:hover {
-    background: rgba(0, 0, 0, 0.8);
+#media-container {
+    position: relative;
+    max-width: 100%;
 }
 
-.image-slider img, .image-slider video {
+#property-media, #property-video {
     max-width: 100%;
     border-radius: 10px;
-    transition: opacity 0.5s ease-in-out;
 }
 
-/* Google Maps Embed */
-.map-container {
+#property-video {
     width: 100%;
-    height: 400px;
-    margin-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.map-container iframe {
-    width: 80%;
-    height: 100%;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: auto;
+    display: none;
 }
 
 /* Footer */
@@ -128,23 +106,22 @@ footer {
     color: white;
     text-align: center;
     padding: 15px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
-/* Property Details */
-.property-details {
-    max-width: 800px;
-    margin: 70px auto; /* Offset for sticky navbar */
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+/* Home Button */
+.home-button {
+    background-color: #ff9800;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 20px;
 }
 
-/* General Container */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+.home-button:hover {
+    background-color: #e68900;
 }
