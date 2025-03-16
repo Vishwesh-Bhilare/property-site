@@ -57,7 +57,8 @@ header {
     transform: scale(1.05);
 }
 
-.property-card h2, .property-card p {
+.property-card h2, .property-card p,
+.property-details h2, .property-details p {
     background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background for readability */
     color: white;
     padding: 8px 12px;
@@ -70,7 +71,7 @@ header {
     margin: 5px auto; /* Center text horizontally */
 }
 
-/* Property Details Page */
+/* Property Details Page - Glass Effect */
 .property-details {
     max-width: 800px;
     margin: 50px auto;
