@@ -41,6 +41,7 @@ header {
     -webkit-backdrop-filter: blur(8px); /* Safari support */
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
@@ -79,6 +80,7 @@ header {
     -webkit-backdrop-filter: blur(8px);
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
