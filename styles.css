@@ -62,9 +62,12 @@ header {
     color: white;
     padding: 8px 12px;
     border-radius: 5px;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: fit-content;
-    margin: 5px 0;
+    text-align: center;
+    margin: 5px auto; /* Center text horizontally */
 }
 
 /* Property Details Page */
