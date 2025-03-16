@@ -34,28 +34,51 @@ header {
     padding: 20px;
 }
 
+/* Property Cards - Glass Effect */
+.property-card {
+    background: rgba(255, 255, 255, 0.15); /* Subtle transparency */
+    backdrop-filter: blur(8px); /* Glass effect */
+    -webkit-backdrop-filter: blur(8px); /* Safari support */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    text-align: center; /* Center text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center text */
+    align-items: center; /* Horizontally center text */
+    min-height: 150px; /* Ensure enough space for content */
+}
+
 .property-card:hover {
     transform: scale(1.05);
 }
 
-.property-card a {
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Glass effect */
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.property-card h2, .property-card p {
+    background: rgba(0, 0, 0, 0.5); /* Dark semi-transparent background for readability */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: block;
+    width: fit-content;
+    margin: 5px 0;
 }
 
-.property-card h2 {
-    margin: 10px 0;
-    background: rgba(255, 255, 255, 0.9); /* Light background for readability */
+/* Property Details Page */
+.property-details {
+    max-width: 800px;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
-
-
 
 /* Image & Video Slider */
 .image-slider {
@@ -66,11 +89,19 @@ header {
 }
 
 .image-slider button {
-    background: none;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
     border: none;
     font-size: 24px;
     cursor: pointer;
     margin: 0 10px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.image-slider button:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 #media-container {
@@ -113,27 +144,4 @@ footer {
 
 .home-button:hover {
     background-color: #e68900;
-}
-
-.property-card, .property-details {
-    background: rgba(255, 255, 255, 0.15); /* More subtle transparency */
-    backdrop-filter: blur(8px); /* Glass effect */
-    -webkit-backdrop-filter: blur(8px); /* Safari support */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft outer shadow */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    position: relative; /* Needed for text overlay */
-    overflow: hidden; /* Prevents blur effect inside */
-    text-align: center;
-}
-
-/* Dark semi-transparent background for text readability */
-.property-card h2, .property-card p,
-.property-details h2, .property-details p {
-    background: rgba(0, 0, 0, 0.5); /* Dark background */
-    color: white;
-    padding: 8px;
-    border-radius: 5px;
-    display: inline-block;
 }
