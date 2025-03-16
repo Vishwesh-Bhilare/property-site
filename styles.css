@@ -56,6 +56,9 @@ header {
 
 .property-card h2 {
     margin: 10px 0;
+    background: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    padding: 20px;
+    border-radius: 10px;
 }
 
 /* Property Details Page */
@@ -67,6 +70,9 @@ header {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    background: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    padding: 20px;
+    border-radius: 10px;
 }
 
 /* Image & Video Slider */
