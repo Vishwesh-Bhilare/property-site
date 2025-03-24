@@ -149,3 +149,10 @@ footer {
 .home-button:hover {
     background-color: #e68900;
 }
+
+.logo {
+    height: 50px; /* Adjust size as needed */
+    width: auto;
+    vertical-align: middle; /* Aligns with text */
+    margin-right: 10px; /* Space between logo and text */
+}
